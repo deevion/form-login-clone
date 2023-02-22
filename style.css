@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: var(--font-roboto);
+  text-decoration: none;
+}
+
+:root {
+  --bg-color: #121214;
+  --bg-form-color: #202024;
+  --bg-button: #6d4ec9;
+  --bg-input-color: #121214;
+  --bg-scrollbar-color: #3d3c42;
+  --color-text: #f9f9f9;
+  --color-github: #6d4ec9;
+  --color-link: #6d4ec9;
+  --hover-link: #8257e6;
+
+  --font-inter: 'Inter', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+  min-height: 100vh;
+}
+
+#primary {
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  min-height: 100vh;
+  flex-wrap: wrap;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: min(100%, 2000px);
+  margin-inline: auto;
+  gap: 83px;
+
+  padding: 80px;
+}
+
+#text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  color: var(--color-text);
+  width: min(90%, 450px);
+}
+
+#logo-svg {
+  margin-bottom: 15%;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  max-width: 430px;
+  background-color: var(--bg-form-color);
+  padding: 3.5rem;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 7px;
+}
+
+input {
+  background-color: var(--bg-input-color);
+  padding: 15px;
+  min-width: 320px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #ffff;
+}
+
+input:focus {
+  outline: 2px solid #6d4ec9;
+  background-color: #f9f9f9;
+  caret-color: #000;
+  color: #000;
+}
+
+h1 {
+  font-family: var(--font-inter);
+  font-size: 48px;
+}
+
+#form #content > button {
+  display: block;
+  min-width: 320px;
+  color: var(--color-text);
+  font-family: var(--font-roboto);
+  font-size: 16px;
+  background-color: var(--bg-button);
+  padding: 0.8rem 1.4rem;
+  border: none;
+  border-radius: 5px;
+  margin: 20px 0 23px 0;
+  cursor: pointer;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-inline: 40px;
+}
+
+#newUser {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  color: var(--color-text);
+
+  margin-bottom: 20px;
+}
+
+#login-github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  margin-top: 10px;
+}
+
+#login-github > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(41, 41, 46);
+  margin-left: 25px;
+  padding: 1rem 3.5rem;
+  border-radius: 5px;
+  color: var(--color-text);
+  gap: 5px;
+
+  font-weight: 500;
+}
+
+#login-github > a:hover {
+  background-color: #7c62d4;
+}
+
+#login-github a:hover > .github {
+  color: var(--color-text);
+}
+
+#login-github > div {
+  color: var(--color-text);
+}
+
+#resgate > a,
+#newUser > a {
+  color: var(--color-link);
+}
+
+#resgate > a:hover,
+#newUser > a:hover {
+  color: var(--hover-link);
+}
+
+.github {
+  color: var(--color-github);
+}
+
+body::-webkit-scrollbar-track {
+  visibility: hidden;
+}
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 16px;
+  background: var(--bg-scrollbar-color);
+}
+
+@media (max-width: 816px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    flex-wrap: wrap;
+  }
+}
